@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tariffs</h1>
+
+<div id="tariffs">
+  <% @tariffs.each do |tariff| %>
+    <%= render tariff %>
+    <p>
+      <%= link_to "Show this tariff", tariff %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tariff", new_tariff_path %>
