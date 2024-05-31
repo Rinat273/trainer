@@ -65,6 +65,6 @@ class TariffsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tariff_params
-      params.require(:tariff).permit(:title, :price, :active_tariff_id)
+      params.require(:tariff).permit(:title, :price)
     end
 end

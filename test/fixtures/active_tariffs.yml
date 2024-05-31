@@ -1,7 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyText
+  user: one
+  tariff: one
+  price: 1
+  quantity: 1
 
 two:
-  name: MyText
+  user: two
+  tariff: two
+  price: 1
+  quantity: 1

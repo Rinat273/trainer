@@ -2,10 +2,6 @@
 
 one:
   title: MyText
-  price: 1
-  active_tariff_id: 1
 
 two:
   title: MyText
-  price: 1
-  active_tariff_id: 1

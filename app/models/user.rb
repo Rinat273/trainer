@@ -1,16 +1,8 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  has_one :active_tariff#, dependent: :destroy
+  has_many :transactions
 
-
-  def update_tariff
-    active = Tariff.find(2)
-    active
-  end
-
-  def done!
-    update!(active_tariff_id: update_tariff.id)
+  def balance
+    transactions.pluck(:amount).sum
   end
 end

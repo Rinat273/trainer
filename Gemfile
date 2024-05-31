@@ -50,6 +50,9 @@ gem 'devise'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
+  gem 'shoulda-matchers', '~> 6.2'
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
 end
 
 group :development do
