@@ -2,11 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ChangeTariff do
   describe 'Creation' do
-    User.destroy_all
-    let!(:user) { create(:user) }
-    let!(:tariff) { create(:tariff) }
-    let!(:new_tariff) { Tariff.create(title: "Утренний") }
-    let!(:active_tariff) { ActiveTariff.create(user_id: user.id, tariff_id: tariff.id, price: 1000, quantity: 12) }
+    let!(:new_tariff) { create(:tariff, title: "Базовый")}
+    let!(:active_tariff) { create(:active_tariff) } 
 
     it "changes active tariff" do
       expect(User.all.count).to eq(1)
