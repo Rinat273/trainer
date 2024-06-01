@@ -3,5 +3,5 @@ class ActiveTariff < ApplicationRecord
   belongs_to :tariff
   has_many :visits
 
-  validates_uniqueness_of :user_id, :message => "is already being used"
+  # validates_uniqueness_of :user_id, :message => "is already being used"
 end

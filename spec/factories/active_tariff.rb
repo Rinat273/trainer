@@ -4,6 +4,5 @@ FactoryBot.define do
     tariff_id
     price { 1000 }
     quantity { 12 }
-    action { false }
   end
 end
