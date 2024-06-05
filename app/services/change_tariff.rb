@@ -1,8 +1,8 @@
 class ChangeTariff
 
-  def initialize(user, new_tariff_id)
-    @user = User.where(name: user)
-    @new_tariff = Tariff.find(new_tariff_id)
+  def initialize(user, new_tariff )
+    @user = user #User.where(name: user)
+    @new_tariff = new_tariff# Tariff.find(new_tariff_id)
 
   end
 
@@ -15,7 +15,8 @@ class ChangeTariff
   private
 
   def check_conditions
-    raise 'Недостаточно баланса' if @user.balance <= @new_tariff.quantity
+    old_tariff = ActiveTariff.where(user_id: @user.id)
+    raise 'Недостаточно баланса' if @user.balance <= old_tariff[0].price
   end
 
   def remove_old_tariff
